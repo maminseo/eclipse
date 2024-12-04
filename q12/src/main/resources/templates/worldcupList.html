@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>결과 보기</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+  	table {width:50%;}
+  </style>
+</head>
+<body>
+	<div>
+	<h2>귀여운 동물 월드컵 우승 결과</h2>
+	<br>
+    <table border = "1">
+		<tr>
+			<th>이름</th> <th>우승 횟수</th>
+        <tr th:each="a:${arr}">
+        	<td th:text="${a.name}"></td>
+            <td th:text="${a.fcount}"></td>
+    </table>
+    <br>
+    <a href="/worldcup1"><button>투표결과 초기화</button></a>
+    <a href="/worldcup1"><button>4강전 다시하기</button></a>
+	</div>
+
+</body>
+</html>

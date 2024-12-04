@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+#loginInfo { float: right; border:1px solid gray; /* 우측작은회색라인네모*/
+	width: 100px; height:20px; padding: 5px;
+	color:gray; font-size:0.8em;} 
+label { color: RGB(100, 100, 100); }  /* 블랙에가까운회색*/
+input { width: 90px; margin:10px 10px 10px0px; }   /* top부터시계방향*/ 
+button { padding: 5px 20px 5px 20px; }
+img{ max-width: 320px;       /* 그림원본비율살림*/          
+	max-height: 320px; }
+#s1 { color: blue; }         /* id는파란색으로*/
+.s2 { color: gray;           /* 그림출처등의부가설명은회색작은글씨*/
+	font-size: 0.8em; }    /* 한화면에부가설명여러개일수도있으니s2는클래스로*/
+hr{ border: 2px solid darkgray; }   /* menu화면에가로줄*/
+li { line-height: 1.5em; }
+li::marker { color: red; }

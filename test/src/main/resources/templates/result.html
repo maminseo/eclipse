@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        #s1 {color :rgb(36, 158, 189)}
+        body { font-size:20px; background-image: url("/backimg.jpg"); background-size: 100%;}
+        div { background-color:rgba(255, 255, 255, 0.8); padding:30px; margin:30px; border-radius:20px;}
+    </style>
+    <title>설문 결과</title>
+</head>
+<body>
+	<div>
+	    <span id=s1 th:text="${mid}">민서</span>님은 <br>
+	    <span th:text="${genre}">발라드</span> 장르와 <br>
+	    <span th:text="${app}">멜론</span> 어플을 선택하셨습니다 <br>
+	    <a href="/surveyList">결과 보기</a>
+    </div>
+    
+    <div>
+        <img id="genreImg" th:src="|${genre}.jpg|" style="width: 100%; max-width: 300px; border-radius: 10px;" >
+    </div>
+    <div>
+        <img id="appImg" th:src="|${app}.jpg|" style="width: 100%; max-width: 300px; border-radius: 10px;" >
+    </div>
+    
+</body>
+</html> 

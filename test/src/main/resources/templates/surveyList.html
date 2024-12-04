@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문결과 리스트</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        table { width: 800px; border-collapse: collapse; text-align: center; }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <h3>설문결과 리스트</h3>
+        <table border="1">
+            <tr>
+                <th>no</th>
+                <th>아이디</th>
+                <th>장르</th>
+                <th>플랫폼</th>
+                <th>설문 일시</th>
+            </tr>
+            <tr th:each="a : ${arr}">
+                <td th:text="${a.no}"></td>
+                <td th:text="${a.userid}"></td>
+                <td th:text="${a.genre}"></td>
+                <td th:text="${a.app}"></td>
+                <td th:text="${a.sdate}"></td>
+            </tr>
+         </table>
+         <br>
+         <a href="/start">시작화면으로 돌아가기</a>
+	</div>
+</body>
+</html>

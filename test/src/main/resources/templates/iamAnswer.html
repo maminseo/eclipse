@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자기소개 결과</title>
+  <style>
+    body {background-color: aquamarine;}
+    span {color: blue;}
+  </style>
+</head>
+<body>
+  저는 <span th:text="${age}"></span>세 <span th:text="${gender}"></span>학생입니다.<p>
+  <span th:if="${#arrays.isEmpty(arr)}">좋아하는 음식은 딱히 없습니다.<br></span>
+    <div th:if="${not #arrays.isEmpty(arr)}">
+    좋아하는 음식은 다음과 같습니다.<br>
+    <span th:each="a : ${arr}">
+      <span th:text="${a}"></span><br>
+    </span>
+  </div><p>
+    저의 자신감 수치(1~5)는 다음과 같습니다.<br>
+    외모 자신감:<span th:text="${q1}"></span><br>
+    학점 자신감:<span th:text="${q2}"></span><br>
+    수업 자신감:<span th:text="${q3}"></span><p>
+    <p th:text="${comments}"></p>
+</body>
+</html>

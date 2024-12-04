@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>질문1</title>
+    <style>
+    div { background-color:rgba(255, 255, 255, 0.7); padding:30px; margin:30px; border-radius:20px;}
+    </style>
+</head>
+<body>
+	<div>
+    	<h3>좋아하는 음악 장르</h3>
+    	<form action="/answer2" method="get" id=genreSelect>
+        	<input type="radio" name="genre" value="발라드"> 발라드 <br>
+        	<input type="radio" name="genre" value="댄스"> 댄스 <br>
+        	<input type="radio" name="genre" value="힙합"> 힙합 <br>
+        	<input type="radio" name="genre" value="알앤비"> R&B <br>
+        	<input type="radio" name="genre" value="재즈"> 재즈 <br>
+        	<input type="radio" name="genre" value="클래식"> 클래식 <p>
+        	<button type="submit">선택</button>
+    	</form>
+    </div>
+
+    <div id="imgDiv" style="display:none">
+        <img id="img" src="/" style="width: 100%; max-width: 300px; border-radius: 10px;" >
+    </div>
+
+      <script>
+        document.getElementById('genreSelect').addEventListener('change', function(event) {
+            if (event.target.name === 'genre') { 
+                var selectedValue = event.target.value; 
+                document.getElementById('imgDiv').style.display = 'block';
+                document.getElementById('img').src = selectedValue + ".jpg"; 
+            }
+        });
+        
+        document.getElementById('genreSelect').addEventListener('submit', function(event) {
+            var selected = document.querySelector('input[name="genre"]:checked');
+            if (!selected) {
+                event.preventDefault(); 
+                alert("음악 장르를 선택해주세요.");
+            }
+        });
+        
+    </script>
+</body>
+</html>

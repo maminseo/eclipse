@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>명언 출력</title>
+</head>
+<body style="background-color:aqua">
+<h1>오늘의 명언</h1>
+<table border="1">
+	<tr>
+		<th> 위인 </th>
+		<td th:text="${mname}"> 니체 </td>
+	</tr>
+	<tr>
+		<th> 명언 </th>
+		<td th:text="${contect}"> 오늘 가장 잘 웃는 자가 최후에도 웃을 것이다 </td>
+	</tr>
+</table>
+</body>
+</html>

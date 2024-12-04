@@ -1,0 +1,7 @@
+@charset "UTF-8";
+@import url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
+
+body { font-family:'Iropke Batang' , serif; background-color:rgb(241, 231, 217); color:rgb(102, 97, 88);} 
+button {  font-family:'Iropke Batang' , serif; color:white; background-color:rgb(102, 97, 88); border:none; border-radius:7px; padding:5px 10px; cursor:pointer; }
+button:hover { background-color:rgb(63, 59, 52); }
+div { background-color:rgba(255, 255, 255, 0.7); padding:30px; margin:30px; border-radius:20px;}

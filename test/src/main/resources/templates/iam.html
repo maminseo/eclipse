@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2243359 마민서</title>
+    <style>
+        h3 {color:brown;}
+        fieldset {width: 400px; border: 1px solid orange; margin-bottom: 15px;}
+        legend {color:darkgray;font-size: 0.8em;}
+        textarea {background: lightyellow;}
+        button {padding: 5px 20px; margin-right: 10px;}
+    </style>
+</head>
+<body>
+    <form method="post" action="/food/report">
+        <h3> 자기소개 </h3>
+        <fieldset>
+            <legend>성별과 나이를 입력하세요.</legend>
+            성별: <input type="radio" name="gender" value="남" checked>남자
+            <input type="radio" name="gender" value="여" >여자 <br>
+            나이: <input type="number" name="age" required>
+        </fieldset>
+        <fieldset>
+            <legend>관심있는 식문화를 선택하세요(복수 가능)</legend>
+            <input type="checkbox" name="food" value="소주에 삼겹살">소주에 삼겹살
+            <input type="checkbox" name="food" value="치맥">치맥
+            <input type="checkbox" name="food" value="마라탕">마라탕
+            <input type="checkbox" name="food" value="딸기 케이크">딸기 케이크
+        </fieldset>
+        <fieldset>
+            <legend>나의 자신감을 어느 정도인가?</legend>    
+            나는 무지 잘생겼다. 1<input type="range" name="q1" min="1" max="5" value="3">5<br>
+            나는 마음만 먹으면 A+이다. 1<input type="range" name="q2" min="1" max="5" value="3">5<br>
+            수업 중 산만해 보여도 머리 속에는 내용이 잘 정리되어 있다. <br>
+            1<input type="range" name="q3" min="1" max="5" value="3">5
+        </fieldset>
+        <textarea name="comments" rows="4" cols="61" placeholder="promote yourself"></textarea><p>
+        <button type="submit">작성완료</button> <button type="reset">새로작성</button>
+    </form>
+</body>
+</html>

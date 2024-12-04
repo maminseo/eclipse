@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        select { font-family:'Iropke Batang' , serif; width: 50%; padding: 5px; border: 1px solid #ccc; border-radius: 5px;}
+        div { background-color:rgba(255, 255, 255, 0.7); padding:30px; margin:30px; border-radius:20px;}
+    </style>
+    <title>질문2</title>
+</head>
+<body>
+	<div>
+    <h1>현재 이용중인 음악 감상 플랫폼</h1>
+    <form action="/thanks" method="get">
+        <select name ="app" id="appSelect">
+            <option value="멜론">멜론</option>
+            <option value="지니">지니</option>
+            <option value="유튜브 뮤직">유튜브 뮤직</option>
+            <option value="스푸티파이">스푸티파이</option>
+            <option value="애플 뮤직">애플 뮤직</option>
+        </select>
+        <button type="submit">선택</button>
+    </form>
+    </div>
+
+    <div>
+        <img id="img" src="멜론.jpg" style="width: 100%; max-width: 300px; border-radius: 10px;">
+    </div>
+
+    <script>
+        document.getElementById('appSelect').addEventListener('change', function () {
+            var selectedValue = this.value; 
+            document.getElementById('img').src =selectedValue + ".jpg";     
+        });
+    </script>
+</body>
+</html>

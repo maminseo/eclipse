@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="|${mname}'s color|"> </title>
+</head>
+<!-- 방법 1 <body th:style="|background-color: ${color}|"> 바 안에서 하드 코딩은 그냥 적어주고 변수면${}-->
+<body th:style="${'background-color:'+color}"> <!-- 하드 코딩에 따옴표 해주고 , 이어줄때는 +연산자 -->
+<!-- ${}안에서는 마치 파이썬 하듯이 ("sum:"+s) 처럼 하면 됨 -->
+<strong th:text="${mname}">mname</strong>
+님이좋아하는색은<br>      
+<strong th:text="${color}">color</strong>입니다
+<!--퀴즈4(1) <strong th:style="${'background:'+color}"th:text="${color}">color</strong>입니다 -->
+<!--퀴즈4(2) <strong th:style="${'color:'+color}" th:text="${color}">color</strong>입니다 -->
+</body>
+</html>
